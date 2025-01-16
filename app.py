@@ -1,3 +1,4 @@
+import turtle
 from flask import(
     Flask,
     render_template,
@@ -21,3 +22,18 @@ def about():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    # Создаем экран и черепашку
+screen = turtle.Screen()
+t = turtle.Turtle()
+
+# Устанавливаем цвет черепашки
+t.color("red")
+
+# Рисуем квадрат
+for _ in range(4):
+    t.forward(100)  # Двигаемся вперед на 100 единиц
+    t.left(90)      # Поворачиваем на 90 градусов
+
+# Закрыть окно по клику
+screen.exitonclick()
